@@ -1,0 +1,35 @@
+{
+    "config": {
+        "name": "testcase description",
+        "variables": {}
+    },
+    "teststeps": [
+        {
+            "name": "/20191020bjl_app/app/base/settle_index/login",
+            "request": {
+                "url": "http://192.168.1.125/20191020bjl_app/app/base/settle_index/login",
+                "method": "POST",
+                "headers": {
+                    "X-Requested-With": "XMLHttpRequest",
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36",
+                    "Content-Type": "multipart/form-data; boundary=----WebKitFormBoundaryCjAAdflCWi6yWVzq"
+                },
+                "data": "------WebKitFormBoundaryCjAAdflCWi6yWVzq\r\nContent-Disposition: form-data; name=\"username\"\r\n\r\n18888888888\r\n------WebKitFormBoundaryCjAAdflCWi6yWVzq\r\nContent-Disposition: form-data; name=\"password\"\r\n\r\na123456\r\n------WebKitFormBoundaryCjAAdflCWi6yWVzq--\r\n"
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "text/html; charset=UTF-8"
+                    ]
+                }
+            ]
+        }
+    ]
+}
