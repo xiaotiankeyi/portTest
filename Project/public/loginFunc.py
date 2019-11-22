@@ -21,3 +21,6 @@ def login():
     assert obj.get_value(row1, obj.get_verifyID()) in response.text            #获取预期判断值
     a = requests.utils.dict_from_cookiejar(response.cookies)        #获取cookie并返回
     return a
+
+if __name__ == "__main__":
+    login()
