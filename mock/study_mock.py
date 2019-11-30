@@ -1,8 +1,10 @@
 import unittest
-from unittest import mock
-
+import os
 import requests
 
+def C():
+    a = os.system("G: && cd moco && java -jar moco-runner-0.12.0-standalone.jar http -p 5555 -c test.json")
+    print(a)
 
 class testmoudle(unittest.TestCase):
 
@@ -23,7 +25,6 @@ class testmoudle(unittest.TestCase):
 
     def tearDown(self):
         pass
-
 
 if __name__ == "__main__":
     unittest.main()
