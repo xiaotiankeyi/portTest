@@ -4,7 +4,10 @@ import unittest
 from BSTestRunner import BSTestRunner
 
 # 运行测试的路径
-run_xpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'test_res')
+run_xpath = os.path.join(
+    os.path.dirname(
+        os.path.abspath(__file__)),
+    'test_res')
 
 # 存放测试报告的路径
 report_xpath = os.path.join(os.getcwd(), 'report')

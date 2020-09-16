@@ -1,6 +1,7 @@
 import requests
 import json
 
+
 class RunMain():
 
     def send_get(self, url, data, headers, cookies):
@@ -12,9 +13,18 @@ class RunMain():
         :param cookies: 请求cookie
         :return:
         """
-        res = requests.get(url=url, params=data, headers=headers, timeout=10, cookies=cookies)
-        result= res.json()
-        return json.dumps(result, indent=2, sort_keys=False, ensure_ascii=False)
+        res = requests.get(
+            url=url,
+            params=data,
+            headers=headers,
+            timeout=10,
+            cookies=cookies)
+        result = res.json()
+        return json.dumps(
+            result,
+            indent=2,
+            sort_keys=False,
+            ensure_ascii=False)
 
     def send_post(self, url, data, headers, cookies):
         """
@@ -25,9 +35,18 @@ class RunMain():
         :param cookies: 请求cookies
         :return:
         """
-        Ares = requests.post(url=url, data=data, headers=headers, timeout=10, cookies=cookies)
-        result= Ares.json()
-        return json.dumps(result, indent=2, sort_keys=False, ensure_ascii=False)
+        Ares = requests.post(
+            url=url,
+            data=data,
+            headers=headers,
+            timeout=10,
+            cookies=cookies)
+        result = Ares.json()
+        return json.dumps(
+            result,
+            indent=2,
+            sort_keys=False,
+            ensure_ascii=False)
 
     def run_main(self, url, method, data=None, headers=None, cookies=None):
 
