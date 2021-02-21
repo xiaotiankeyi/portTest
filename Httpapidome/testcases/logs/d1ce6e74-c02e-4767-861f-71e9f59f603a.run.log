@@ -1,0 +1,68 @@
+2021-02-20 22:05:51.882 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: testcase description, TestCase ID: d1ce6e74-c02e-4767-861f-71e9f59f603a
+2021-02-20 22:05:51.885 | INFO     | httprunner.runner:__run_step:292 - run step begin: /reg/ >>>>>>
+2021-02-20 22:05:51.896 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'NoneType' object has no attribute 'getsockname'
+2021-02-20 22:05:51.897 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'NoneType' object has no attribute 'getpeername'
+2021-02-20 22:05:51.899 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : http://127.0.0.1:7777/reg/
+headers  : {
+    "User-Agent": "PostmanRuntime/7.26.10",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json",
+    "Postman-Token": "2a6b1ad4-b812-4ea0-a640-b4f77b5c8447",
+    "HRUN-Request-ID": "HRUN-d1ce6e74-c02e-4767-861f-71e9f59f603a-951887",
+    "Content-Length": "40"
+}
+cookies  : {}
+body     : {
+    "password": 123456,
+    "username": "jack"
+}
+
+2021-02-20 22:05:51.901 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Content-Type": "text/html; charset=utf-8",
+    "Content-Length": "44",
+    "Server": "Werkzeug/1.0.1 Python/3.7.5",
+    "Date": "Sat, 20 Feb 2021 14:05:51 GMT"
+}
+cookies  : {}
+encoding : utf-8
+content_type : text/html; charset=utf-8
+body     : {
+    "msg": "\u7528\u6237\u5df2\u5b58\u5728",
+    "msg_code": 2001
+}
+
+2021-02-20 22:05:51.902 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 9.0 ms, response_length: 0 bytes
+2021-02-20 22:05:51.904 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2021-02-20 22:05:51.905 | INFO     | httprunner.response:validate:246 - assert headers."Content-Type" equal text/html; charset=utf-8(str)	==> pass
+2021-02-20 22:05:51.906 | ERROR    | httprunner.response:validate:263 - assert body.msg equal 注册成功！(str)	==> fail
+check_item: body.msg
+check_value: 用户已存在(str)
+assert_method: equal
+expect_value: 注册成功！(str)
+2021-02-20 22:05:51.908 | ERROR    | httprunner.runner:log_req_resp_details:194 - 
+******************************** DETAILED REQUEST & RESPONSE ********************************
+====== request details ======
+url: http://127.0.0.1:7777/reg/
+method: POST
+headers: {'Content-Type': 'application/json', 'Postman-Token': '2a6b1ad4-b812-4ea0-a640-b4f77b5c8447', 'User-Agent': 'PostmanRuntime/7.26.10', 'HRUN-Request-ID': 'HRUN-d1ce6e74-c02e-4767-861f-71e9f59f603a-951887'}
+params: {}
+data: None
+cookies: {}
+timeout: 120
+allow_redirects: True
+verify: False
+json: {'password': 123456, 'username': 'jack'}
+
+====== response details ======
+status_code: 200
+headers: {'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '44', 'Server': 'Werkzeug/1.0.1 Python/3.7.5', 'Date': 'Sat, 20 Feb 2021 14:05:51 GMT'}
+body: '{"msg": "用户已存在", "msg_code": 2001}'
+

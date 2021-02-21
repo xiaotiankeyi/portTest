@@ -1,0 +1,25 @@
+config:
+    name: testcase description
+    variables: {}
+teststeps:
+-   name: /reg/
+    request:
+        headers:
+            Content-Type: application/json
+            Postman-Token: 2a6b1ad4-b812-4ea0-a640-b4f77b5c8447
+            User-Agent: PostmanRuntime/7.26.10
+        json:
+            password: 123456
+            username: xiaotian
+        method: POST
+        url: http://127.0.0.1:7777/reg/
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - text/html; charset=utf-8
+    -   eq:
+        - content.msg
+        - 注册成功！

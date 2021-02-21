@@ -1,0 +1,42 @@
+2021-02-20 22:29:37.098 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 主页面, TestCase ID: fd87be70-582f-4d1c-97fe-4650cabe5eeb
+2021-02-20 22:29:37.101 | INFO     | httprunner.runner:__run_step:292 - run step begin: /index/ >>>>>>
+2021-02-20 22:29:37.108 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'NoneType' object has no attribute 'getsockname'
+2021-02-20 22:29:37.112 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'NoneType' object has no attribute 'getpeername'
+2021-02-20 22:29:37.113 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : http://127.0.0.1:7777/index/
+headers  : {
+    "User-Agent": "PostmanRuntime/7.26.10",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Postman-Token": "7a5f82f8-4796-4da2-8f16-0f1eba88b696",
+    "HRUN-Request-ID": "HRUN-fd87be70-582f-4d1c-97fe-4650cabe5eeb-377103"
+}
+cookies  : {}
+body     : None
+
+2021-02-20 22:29:37.114 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Content-Type": "text/html; charset=utf-8",
+    "Content-Length": "59",
+    "Server": "Werkzeug/1.0.1 Python/3.7.5",
+    "Date": "Sat, 20 Feb 2021 14:29:37 GMT"
+}
+cookies  : {}
+encoding : utf-8
+content_type : text/html; charset=utf-8
+body     : {
+    "msg": "\u8fd9\u662f\u6211\u5f00\u53d1\u7684\u7b2c\u4e00\u4e2a\u63a5\u53e3",
+    "msg_code": 0
+}
+
+2021-02-20 22:29:37.116 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 5.0 ms, response_length: 0 bytes
+2021-02-20 22:29:37.117 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2021-02-20 22:29:37.119 | INFO     | httprunner.response:validate:246 - assert headers."Content-Type" equal text/html; charset=utf-8(str)	==> pass
+2021-02-20 22:29:37.120 | INFO     | httprunner.response:validate:246 - assert body.msg equal 这是我开发的第一个接口(str)	==> pass
+2021-02-20 22:29:37.121 | INFO     | httprunner.runner:__run_step:304 - run step end: /index/ <<<<<<
+

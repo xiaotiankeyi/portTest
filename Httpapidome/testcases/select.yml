@@ -1,0 +1,30 @@
+config:
+    name: testcase description
+    variables: {}
+
+teststeps:
+-   name: /login/
+    testcase: login.yml
+        #    export:
+        #        - assess_token
+    output:         #控制台输出变量值
+        - assess_token
+
+-   name: /select/
+    request:
+        headers:
+            Postman-Token: 121546e2-4bce-4038-9593-590db35b9b0d
+            User-Agent: PostmanRuntime/7.26.10
+        method: GET
+        params:
+            quantity: '2'
+            tonke: ${assess_token}
+        url: ${ENV(host)}/select/
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - text/html; charset=utf-8
+    -   equal: [content.msg, 查询成功!, 查询成功!]

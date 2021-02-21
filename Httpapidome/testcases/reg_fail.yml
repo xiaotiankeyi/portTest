@@ -1,0 +1,25 @@
+config:
+    name: testcase description
+    variables: {}
+teststeps:
+-   name: /reg/
+    request:
+        headers:
+            Content-Type: application/json
+            Postman-Token: 3481d429-d7cb-4961-b679-20e1dde10cc0
+            User-Agent: PostmanRuntime/7.26.10
+        json:
+            password: 123456
+            username: xiaoming
+        method: POST
+        url: http://127.0.0.1:7777/reg/
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - text/html; charset=utf-8
+    -   eq:
+        - content.msg
+        - 用户已存在

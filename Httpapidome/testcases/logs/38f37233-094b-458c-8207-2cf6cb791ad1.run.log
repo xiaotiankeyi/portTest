@@ -1,0 +1,47 @@
+2021-02-21 13:00:37.399 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: testcase description, TestCase ID: 38f37233-094b-458c-8207-2cf6cb791ad1
+2021-02-21 13:00:37.401 | INFO     | httprunner.runner:__run_step:292 - run step begin: /login/ >>>>>>
+2021-02-21 13:00:37.433 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'NoneType' object has no attribute 'getsockname'
+2021-02-21 13:00:37.435 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'NoneType' object has no attribute 'getpeername'
+2021-02-21 13:00:37.437 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : http://127.0.0.1:7777/login/
+headers  : {
+    "User-Agent": "PostmanRuntime/7.26.10",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json",
+    "Postman-Token": "8e88c021-73a9-4b92-a81f-4d50c777a702",
+    "HRUN-Request-ID": "HRUN-38f37233-094b-458c-8207-2cf6cb791ad1-637402",
+    "Content-Length": "40"
+}
+cookies  : {}
+body     : {
+    "password": 123456,
+    "username": "jack"
+}
+
+2021-02-21 13:00:37.440 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Content-Type": "text/html; charset=utf-8",
+    "Content-Length": "95",
+    "Server": "Werkzeug/1.0.1 Python/3.7.5",
+    "Date": "Sun, 21 Feb 2021 05:00:37 GMT"
+}
+cookies  : {}
+encoding : utf-8
+content_type : text/html; charset=utf-8
+body     : {
+    "msg": "\u7528\u6237\u767b\u5f55\u6210\u529f\uff01\uff01",
+    "tonke": "4j03ff85ffgdf2fksnw71ss6uhsfld",
+    "msg_code": 200
+}
+
+2021-02-21 13:00:37.442 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 30.0 ms, response_length: 0 bytes
+2021-02-21 13:00:37.444 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2021-02-21 13:00:37.445 | INFO     | httprunner.response:validate:246 - assert headers."Content-Type" equal text/html; charset=utf-8(str)	==> pass
+2021-02-21 13:00:37.446 | INFO     | httprunner.runner:__run_step:304 - run step end: /login/ <<<<<<
+

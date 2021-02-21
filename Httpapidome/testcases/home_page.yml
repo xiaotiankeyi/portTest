@@ -1,0 +1,31 @@
+config:
+    name: 主页面
+    variables: {}       #创建全局变量
+    #base_url:
+    #parameters:
+teststeps:      #测试步骤
+-   name: /index/
+    request:
+        headers:
+            Postman-Token: 7a5f82f8-4796-4da2-8f16-0f1eba88b696
+            User-Agent: PostmanRuntime/7.26.10
+        method: GET
+        url: ${ENV(host)}/index/
+        #params:
+        #cookies:
+        #data:
+        #json:
+    #extract:        #提取响应中的返回值
+
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - text/html; charset=utf-8
+    -   eq:
+        - content.msg
+        - 这是我开发的第一个接口
+    #-   equal: [content.msg, 这是我开发的第一个接口, 这是我开发的第一个接口]      #判断相等
+    -   contained_by: [content.msg, 这是我开发的第一个接口, 这是我开发的]      #判断是否包含

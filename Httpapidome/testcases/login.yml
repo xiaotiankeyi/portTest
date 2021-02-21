@@ -1,0 +1,29 @@
+config:
+    name: testcase description
+    variables: {}
+    export:
+        - assess_token
+    output:         #控制台输出变量值
+        - assess_token
+teststeps:
+-   name: /login/
+    request:
+        headers:
+            Content-Type: application/json
+            Postman-Token: 8e88c021-73a9-4b92-a81f-4d50c777a702
+            User-Agent: PostmanRuntime/7.26.10
+        json:
+            password: 123456
+            username: jack
+        method: POST
+        url: http://127.0.0.1:7777/login/
+    extract:
+        assess_token: content.tonke
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - text/html; charset=utf-8
+    -   equal: [content.msg, 用户登录成功！！, 用户登录成功！！]

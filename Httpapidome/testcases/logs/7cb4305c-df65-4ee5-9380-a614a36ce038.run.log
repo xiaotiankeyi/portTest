@@ -1,0 +1,2 @@
+2021-02-20 22:04:17.282 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: Ö÷Ò³Ãæ, TestCase ID: 7cb4305c-df65-4ee5-9380-a614a36ce038
+2021-02-20 22:04:17.285 | INFO     | httprunner.runner:__run_step:292 - run step begin: /index/ >>>>>>

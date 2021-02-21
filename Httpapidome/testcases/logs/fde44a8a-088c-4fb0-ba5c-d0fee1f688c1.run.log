@@ -1,0 +1,7 @@
+2021-02-20 21:55:02.657 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: Ö÷Ò³Ãæ, TestCase ID: fde44a8a-088c-4fb0-ba5c-d0fee1f688c1
+2021-02-20 21:55:02.659 | INFO     | httprunner.runner:__run_step:292 - run step begin: /index/ >>>>>>
+2021-02-20 21:55:02.661 | ERROR    | httprunner.parser:parse_string:343 - call function error:
+func_name: ENV
+args: ['HOST']
+kwargs: {}
+EnvNotFound: HOST

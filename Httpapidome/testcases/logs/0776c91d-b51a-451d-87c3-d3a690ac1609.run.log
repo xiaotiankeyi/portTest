@@ -1,0 +1,98 @@
+2021-02-21 13:58:44.231 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: testcase description, TestCase ID: 0776c91d-b51a-451d-87c3-d3a690ac1609
+2021-02-21 13:58:44.233 | INFO     | httprunner.runner:__run_step:292 - run step begin: 用户登录 >>>>>>
+2021-02-21 13:58:44.281 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'NoneType' object has no attribute 'getsockname'
+2021-02-21 13:58:44.284 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'NoneType' object has no attribute 'getpeername'
+2021-02-21 13:58:44.285 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : http://127.0.0.1:7777/login/
+headers  : {
+    "User-Agent": "PostmanRuntime/7.26.10",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json",
+    "Postman-Token": "80d8ba6c-750f-4def-9264-28d165560de3",
+    "HRUN-Request-ID": "HRUN-0776c91d-b51a-451d-87c3-d3a690ac1609-124235",
+    "Content-Length": "40"
+}
+cookies  : {}
+body     : {
+    "password": 123456,
+    "username": "jack"
+}
+
+2021-02-21 13:58:44.289 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Content-Type": "text/html; charset=utf-8",
+    "Content-Length": "95",
+    "Server": "Werkzeug/1.0.1 Python/3.7.5",
+    "Date": "Sun, 21 Feb 2021 05:58:44 GMT"
+}
+cookies  : {}
+encoding : utf-8
+content_type : text/html; charset=utf-8
+body     : {
+    "msg": "\u7528\u6237\u767b\u5f55\u6210\u529f\uff01\uff01",
+    "tonke": "4j03ff85ffgdf2fksnw71ss6uhsfld",
+    "msg_code": 200
+}
+
+2021-02-21 13:58:44.291 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 46.0 ms, response_length: 0 bytes
+2021-02-21 13:58:44.292 | INFO     | httprunner.response:extract:176 - extract mapping: {'assess_token': '4j03ff85ffgdf2fksnw71ss6uhsfld'}
+2021-02-21 13:58:44.293 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2021-02-21 13:58:44.294 | INFO     | httprunner.response:validate:246 - assert headers."Content-Type" equal text/html; charset=utf-8(str)	==> pass
+2021-02-21 13:58:44.295 | INFO     | httprunner.response:validate:246 - assert body.msg equal 用户登录成功！！(str)	==> pass
+2021-02-21 13:58:44.295 | INFO     | httprunner.runner:__run_step:304 - run step end: 用户登录 <<<<<<
+
+2021-02-21 13:58:44.296 | INFO     | httprunner.runner:__run_step:292 - run step begin: 查询数据库数据 >>>>>>
+2021-02-21 13:58:44.328 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'NoneType' object has no attribute 'getsockname'
+2021-02-21 13:58:44.329 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'NoneType' object has no attribute 'getpeername'
+2021-02-21 13:58:44.331 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : http://127.0.0.1:7777/select/?quantity=2&tonke=4j03ff85ffgdf2fksnw71ss6uhsfld
+headers  : {
+    "User-Agent": "PostmanRuntime/7.26.10",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Postman-Token": "a982c36b-6cb4-431e-8736-e968f2693601",
+    "HRUN-Request-ID": "HRUN-0776c91d-b51a-451d-87c3-d3a690ac1609-124297"
+}
+cookies  : {}
+body     : None
+
+2021-02-21 13:58:44.334 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Content-Type": "text/html; charset=utf-8",
+    "Content-Length": "94",
+    "Server": "Werkzeug/1.0.1 Python/3.7.5",
+    "Date": "Sun, 21 Feb 2021 05:58:44 GMT"
+}
+cookies  : {}
+encoding : utf-8
+content_type : text/html; charset=utf-8
+body     : {
+    "msg": "\u67e5\u8be2\u6210\u529f!",
+    "data": [
+        {
+            "username": "jack"
+        },
+        {
+            "username": "sam"
+        }
+    ],
+    "msg_code": 200
+}
+
+2021-02-21 13:58:44.336 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 30.0 ms, response_length: 0 bytes
+2021-02-21 13:58:44.338 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2021-02-21 13:58:44.339 | INFO     | httprunner.response:validate:246 - assert headers."Content-Type" equal text/html; charset=utf-8(str)	==> pass
+2021-02-21 13:58:44.339 | INFO     | httprunner.response:validate:246 - assert body.msg equal 查询成功!(str)	==> pass
+2021-02-21 13:58:44.340 | INFO     | httprunner.runner:__run_step:304 - run step end: 查询数据库数据 <<<<<<
+

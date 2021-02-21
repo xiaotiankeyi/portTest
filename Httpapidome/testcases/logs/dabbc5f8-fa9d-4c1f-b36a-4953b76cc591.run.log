@@ -1,0 +1,7 @@
+2021-02-20 21:50:57.211 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: Ö÷Ò³Ãæ, TestCase ID: dabbc5f8-fa9d-4c1f-b36a-4953b76cc591
+2021-02-20 21:50:57.213 | INFO     | httprunner.runner:__run_step:292 - run step begin: /index/ >>>>>>
+2021-02-20 21:50:57.215 | ERROR    | httprunner.parser:parse_string:343 - call function error:
+func_name: ENV
+args: ['IP']
+kwargs: {}
+EnvNotFound: IP
