@@ -14,11 +14,18 @@ class Testalterpwd(startup):
         global cookies
         cookies = cookies
 
-        url = self.obj.get_value(row, self.obj.get_host()) + self.obj.get_value(row, self.obj.get_urlxpath())
+        url = self.obj.get_value(row,
+                                 self.obj.get_host()) + self.obj.get_value(row,
+                                                                           self.obj.get_urlxpath())
         data = eval(self.obj.get_value(row, self.obj.get_params()))
 
-        obj = requests.request(method=self.obj.get_value(row, self.obj.get_method()),
-                               url=url, data=data, cookies=cookies)
+        obj = requests.request(
+            method=self.obj.get_value(
+                row,
+                self.obj.get_method()),
+            url=url,
+            data=data,
+            cookies=cookies)
 
         assert self.obj.get_value(row, self.obj.get_verifyID()) in obj.text
 
@@ -26,11 +33,18 @@ class Testalterpwd(startup):
         """设置支付密码失败,请输入新密码"""
         row = 4
 
-        url = self.obj.get_value(row, self.obj.get_host()) + self.obj.get_value(row, self.obj.get_urlxpath())
+        url = self.obj.get_value(row,
+                                 self.obj.get_host()) + self.obj.get_value(row,
+                                                                           self.obj.get_urlxpath())
         data = eval(self.obj.get_value(row, self.obj.get_params()))
 
-        obj = requests.request(method=self.obj.get_value(row, self.obj.get_method()),
-                               url=url, data=data, cookies=cookies)
+        obj = requests.request(
+            method=self.obj.get_value(
+                row,
+                self.obj.get_method()),
+            url=url,
+            data=data,
+            cookies=cookies)
 
         assert self.obj.get_value(row, self.obj.get_verifyID()) in obj.text
 
@@ -38,11 +52,18 @@ class Testalterpwd(startup):
         """设置支付密码失败,请确认新密码"""
         row = 5
 
-        url = self.obj.get_value(row, self.obj.get_host()) + self.obj.get_value(row, self.obj.get_urlxpath())
+        url = self.obj.get_value(row,
+                                 self.obj.get_host()) + self.obj.get_value(row,
+                                                                           self.obj.get_urlxpath())
         data = eval(self.obj.get_value(row, self.obj.get_params()))
 
-        obj = requests.request(method=self.obj.get_value(row, self.obj.get_method()),
-                               url=url, data=data, cookies=cookies)
+        obj = requests.request(
+            method=self.obj.get_value(
+                row,
+                self.obj.get_method()),
+            url=url,
+            data=data,
+            cookies=cookies)
 
         assert self.obj.get_value(row, self.obj.get_verifyID()) in obj.text
 
@@ -50,11 +71,18 @@ class Testalterpwd(startup):
         """设置支付密码失败,请输入新密码"""
         row = 6
 
-        url = self.obj.get_value(row, self.obj.get_host()) + self.obj.get_value(row, self.obj.get_urlxpath())
+        url = self.obj.get_value(row,
+                                 self.obj.get_host()) + self.obj.get_value(row,
+                                                                           self.obj.get_urlxpath())
         data = eval(self.obj.get_value(row, self.obj.get_params()))
 
-        obj = requests.request(method=self.obj.get_value(row, self.obj.get_method()),
-                               url=url, data=data, cookies=cookies)
+        obj = requests.request(
+            method=self.obj.get_value(
+                row,
+                self.obj.get_method()),
+            url=url,
+            data=data,
+            cookies=cookies)
 
         assert self.obj.get_value(row, self.obj.get_verifyID()) in obj.text
 
@@ -62,11 +90,18 @@ class Testalterpwd(startup):
         """设置支付密码成功"""
         row = 7
 
-        url = self.obj.get_value(row, self.obj.get_host()) + self.obj.get_value(row, self.obj.get_urlxpath())
+        url = self.obj.get_value(row,
+                                 self.obj.get_host()) + self.obj.get_value(row,
+                                                                           self.obj.get_urlxpath())
         data = eval(self.obj.get_value(row, self.obj.get_params()))
 
-        obj = requests.request(method=self.obj.get_value(row, self.obj.get_method()),
-                               url=url, data=data, cookies=cookies)
+        obj = requests.request(
+            method=self.obj.get_value(
+                row,
+                self.obj.get_method()),
+            url=url,
+            data=data,
+            cookies=cookies)
 
         assert self.obj.get_value(row, self.obj.get_verifyID()) in obj.text
 

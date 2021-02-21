@@ -15,14 +15,24 @@ class Testshopping(startup):
         cookies = self.cookies
         row = 19
 
-        url = self.obj.get_value(row, self.obj.get_host()) + self.obj.get_value(row, self.obj.get_urlxpath())
+        url = self.obj.get_value(row,
+                                 self.obj.get_host()) + self.obj.get_value(row,
+                                                                           self.obj.get_urlxpath())
         method = self.obj.get_value(row, self.obj.get_method())
         data = eval(self.obj.get_value(row, self.obj.get_params()))
 
         obj = RunMain()
-        returnvalue = obj.run_main(url=url, method=method, data=data, cookies=cookies)
+        returnvalue = obj.run_main(
+            url=url,
+            method=method,
+            data=data,
+            cookies=cookies)
 
-        self.assertIn(self.obj.get_value(row, self.obj.get_verifyID()), returnvalue)
+        self.assertIn(
+            self.obj.get_value(
+                row,
+                self.obj.get_verifyID()),
+            returnvalue)
 
     def test_case2(self):
         """购物车添加商品成功"""
@@ -31,15 +41,25 @@ class Testshopping(startup):
         sql = "SELECT id,shop_goods_class_id,goods_name from ds_settle_shop_goods;"
         value = mysql(sql=sql, way='select')
 
-        url = self.obj.get_value(row, self.obj.get_host()) + self.obj.get_value(row, self.obj.get_urlxpath())
+        url = self.obj.get_value(row,
+                                 self.obj.get_host()) + self.obj.get_value(row,
+                                                                           self.obj.get_urlxpath())
         method = self.obj.get_value(row, self.obj.get_method())
         data = eval(self.obj.get_value(row, self.obj.get_params()))
         data['goodsid'] = value['id']
 
         obj = RunMain()
-        returnvalue = obj.run_main(url=url, method=method, data=data, cookies=cookies)
+        returnvalue = obj.run_main(
+            url=url,
+            method=method,
+            data=data,
+            cookies=cookies)
 
-        self.assertIn(self.obj.get_value(row, self.obj.get_verifyID()), returnvalue)
+        self.assertIn(
+            self.obj.get_value(
+                row,
+                self.obj.get_verifyID()),
+            returnvalue)
 
         sql = "SELECT * from ds_settle_shop_cart WHERE user_id=1;"
         data = mysql(sql=sql, way='select')

@@ -1,0 +1,12 @@
+har2case .har  -2y      转化为Yaml文件
+    -   eq:
+        - content.msg
+        - 用户登录成功!!
+        -   eq:
+        - content.msg
+        - 查询成功
+            extract:
+        tonken: content.tonke
+
+hrun  .yml      执行用例
+hrun /path/to/testcase.yml --dot-env-path /path/to/.env --log-level debug

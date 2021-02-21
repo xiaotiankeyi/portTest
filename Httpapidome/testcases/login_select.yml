@@ -1,0 +1,49 @@
+config:
+    name: testcase description
+    variables: {}
+teststeps:
+-   name: 用户登录
+    request:
+        headers:
+            Content-Type: application/json
+            Postman-Token: 80d8ba6c-750f-4def-9264-28d165560de3
+            User-Agent: PostmanRuntime/7.26.10
+        json:
+            password: 123456
+            username: jack
+        method: POST
+        url: ${ENV(host)}/login/
+    extract:
+        assess_token: content.tonke
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - text/html; charset=utf-8
+    -   eq:
+        - content.msg
+        - 用户登录成功！！
+
+
+-   name: 查询数据库数据
+    request:
+        headers:
+            Postman-Token: a982c36b-6cb4-431e-8736-e968f2693601
+            User-Agent: PostmanRuntime/7.26.10
+        method: GET
+        params:
+            quantity: '2'
+            tonke: ${assess_token}
+        url: ${ENV(host)}/select/
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - text/html; charset=utf-8
+    -   eq:
+        - content.msg
+        - 查询成功!
