@@ -1,0 +1,38 @@
+config:
+    name: testcase description
+    variables: {}
+    export:
+        - tag_id
+teststeps:
+-   name: 获取标签列表
+    request:
+        headers:
+            Postman-Token: a2e44e63-cf13-441a-bc08-2f3d71cea91c
+            User-Agent: PostmanRuntime/7.26.10
+        method: GET
+        params:
+            access_token: ${rand_yaml_data(access_token)}
+        url: ${rand_yaml_data(host)}/cgi-bin/tag/list
+
+    extract:
+        - tag_id: content.taglist[0].tagid
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/json; charset=UTF-8
+    -   eq:
+        - content.errcode
+        - 0
+    -   eq:
+        - content.errmsg
+        - ok
+#    -   eq:
+#        - content.taglist[0].tagname
+#        - UI部门
+
+    -   contains:       #预期结果是否被包含在实际结果中
+        - content.taglist[0]
+        - tagname

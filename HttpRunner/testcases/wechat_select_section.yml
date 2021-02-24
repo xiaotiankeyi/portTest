@@ -1,0 +1,37 @@
+config:
+  name: testcase description
+  variables: {}
+  export:
+    - parentid
+teststeps:
+  - name: 获取部门列表
+    request:
+      headers:
+        Postman-Token: 6e33e13b-1815-434e-9af7-89dd95ff39a8
+        User-Agent: PostmanRuntime/7.26.10
+      method: GET
+      params:
+        access_token: ${rand_yaml_data(access_token)}
+      url: ${rand_yaml_data(host)}/cgi-bin/department/list
+
+    extract:
+      - parentid: content.department[0].id        #获取父部门id
+    validate:
+      - eq:
+          - status_code
+          - 200
+      - eq:
+          - headers.Content-Type
+          - application/json; charset=UTF-8
+      - eq:
+          - content.errcode
+          - 0
+      - eq:
+          - content.errmsg
+          - ok
+      - contains:       #返回的信息中存在id
+          - content.department[0]
+          - id
+#    -   eq:
+#        - concent.department[0].name
+#        - 奋进文化传煤有限公司

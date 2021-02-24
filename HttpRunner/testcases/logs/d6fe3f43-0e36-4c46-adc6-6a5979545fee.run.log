@@ -1,0 +1,50 @@
+2021-02-24 21:11:04.639 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: testcase description, TestCase ID: d6fe3f43-0e36-4c46-adc6-6a5979545fee
+2021-02-24 21:11:04.640 | INFO     | httprunner.runner:__run_step:292 - run step begin: 获取access_token >>>>>>
+2021-02-24 21:11:04.779 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.0.101, Port: 52908
+2021-02-24 21:11:04.781 | DEBUG    | httprunner.client:request:194 - server IP: 183.3.234.106, Port: 443
+2021-02-24 21:11:04.782 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww96523b6dd1de7e43&corpsecret=jLDLOaUeCoXHOGDMjdkP5AVXh0pzYqOO-RWwYynBlGw
+headers  : {
+    "User-Agent": "PostmanRuntime/7.26.10",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Postman-Token": "60602b56-73b7-4ea7-b6cc-384a0d8b78fa",
+    "HRUN-Request-ID": "HRUN-d6fe3f43-0e36-4c46-adc6-6a5979545fee-264649"
+}
+cookies  : {}
+body     : None
+
+2021-02-24 21:11:04.784 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx",
+    "Date": "Wed, 24 Feb 2021 13:11:03 GMT",
+    "Content-Type": "application/json; charset=UTF-8",
+    "Content-Length": "277",
+    "Connection": "keep-alive",
+    "Error-Code": "0",
+    "Error-Msg": "ok"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json; charset=UTF-8
+body     : {
+    "errcode": 0,
+    "errmsg": "ok",
+    "access_token": "TiE_YAxUZ7WFUhQlFTLrfDaFObAsUWBnmzupJw_IDhxsDe09SXi5qOgv2AymjilbgdUacdvDv9FdOKryvKL9lkEuKP5l8m3dB6YlamoRAkvxay_ksbDB8_DNARqIXqQeBYlCZ7Q5vihd6OlxYvtOaywH6AS1FU0M8oJdbiARG-VWPRlmFE3IU3ALapvSbnktqU3XOqkJVNOMua1WamZ5TQ",
+    "expires_in": 7200
+}
+
+2021-02-24 21:11:04.786 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 130.0 ms, response_length: 0 bytes
+2021-02-24 21:11:04.787 | INFO     | httprunner.response:extract:176 - extract mapping: {'access_token': 'TiE_YAxUZ7WFUhQlFTLrfDaFObAsUWBnmzupJw_IDhxsDe09SXi5qOgv2AymjilbgdUacdvDv9FdOKryvKL9lkEuKP5l8m3dB6YlamoRAkvxay_ksbDB8_DNARqIXqQeBYlCZ7Q5vihd6OlxYvtOaywH6AS1FU0M8oJdbiARG-VWPRlmFE3IU3ALapvSbnktqU3XOqkJVNOMua1WamZ5TQ'}
+2021-02-24 21:11:04.788 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2021-02-24 21:11:04.789 | INFO     | httprunner.response:validate:246 - assert headers."Content-Type" equal application/json; charset=UTF-8(str)	==> pass
+2021-02-24 21:11:04.790 | INFO     | httprunner.response:validate:246 - assert body.errcode equal 0(int)	==> pass
+2021-02-24 21:11:04.792 | INFO     | httprunner.response:validate:246 - assert body.errmsg equal ok(str)	==> pass
+2021-02-24 21:11:04.800 | INFO     | httprunner.response:validate:246 - assert body.expires_in equal 7200(int)	==> pass
+2021-02-24 21:11:04.801 | INFO     | httprunner.runner:__run_step:304 - run step end: 获取access_token <<<<<<
+

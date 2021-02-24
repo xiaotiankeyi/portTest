@@ -1,0 +1,47 @@
+config:
+    name: testcase description
+    variables:
+        id: 3
+        name: 北京研发中心
+        name_en: RDBJ
+        order: 1
+
+teststeps:
+
+#-   name: 获取部门列表
+#    testcase: wechat_select_section.yml
+#    output:
+#        - parentid
+
+-   name: 创建部门
+    request:
+        headers:
+            Content-Type: application/json
+#            Postman-Token: 257300f0-d346-49f9-b14a-13dd9402d127
+#            User-Agent: PostmanRuntime/7.26.10
+        json:
+            id: ${rand_yaml_data(subdivision_id)}
+            name: ${name}
+            name_en: ${name_en}
+            order: ${order}        #在父部门中的次序值
+            parentid: ${rand_yaml_data(parentid)}   #父部门id
+        method: POST
+        params:
+            access_token: ${rand_yaml_data(access_token)}
+        url: ${rand_yaml_data(host)}/cgi-bin/department/create
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/json; charset=UTF-8
+    -   eq:
+        - content.errcode
+        - 0
+    -   eq:
+        - content.errmsg
+        - created
+    -   eq:
+        - content.id
+        - ${id}
