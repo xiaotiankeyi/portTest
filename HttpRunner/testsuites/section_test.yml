@@ -1,0 +1,7 @@
+config:
+    name: 针对部门接口增删改查操作
+    variables: {}
+
+teststeps:
+-   name: 查找部门
+    testcase: C:\Users\jack\PycharmProjects\portTest\HttpRunner\testcases\section_test\wechat_select_section.yml

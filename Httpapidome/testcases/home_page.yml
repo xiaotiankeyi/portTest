@@ -4,7 +4,7 @@ config:
     #base_url:
     #parameters:
 teststeps:      #测试步骤
--   name: /index/
+-   name: 主页面接口
     request:
         headers:
             Postman-Token: 7a5f82f8-4796-4da2-8f16-0f1eba88b696

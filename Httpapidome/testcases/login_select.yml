@@ -13,6 +13,7 @@ teststeps:
             username: jack
         method: POST
         url: ${ENV(host)}/login/
+    #    提取返回值中的token值
     extract:
         assess_token: content.tonke
     validate:
@@ -35,7 +36,7 @@ teststeps:
         method: GET
         params:
             quantity: '2'
-            tonke: ${assess_token}
+            tonke: ${assess_token}      #调用上一个接口返回值token值
         url: ${ENV(host)}/select/
     validate:
     -   eq:

@@ -1,0 +1,27 @@
+config:
+    name: testcase description
+    variables: {}
+teststeps:
+-   name: 删除部门
+    request:
+        headers:
+            Postman-Token: 38e3a0a4-ad0d-4a45-9877-9102dad47fcc
+            User-Agent: PostmanRuntime/7.26.10
+        method: GET
+        params:
+            access_token: ${rand_yaml_data(access_token)}
+            id: ${rand_yaml_data(subdivision_id)}
+        url: ${rand_yaml_data(host)}/cgi-bin/department/delete
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/json; charset=UTF-8
+    -   eq:
+        - content.errcode
+        - 0
+    -   eq:
+        - content.errmsg
+        - deleted

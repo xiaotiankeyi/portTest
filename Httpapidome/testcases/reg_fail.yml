@@ -2,7 +2,7 @@ config:
     name: testcase description
     variables: {}
 teststeps:
--   name: /reg/
+-   name: 注册失败接口
     request:
         headers:
             Content-Type: application/json
@@ -12,7 +12,7 @@ teststeps:
             password: 123456
             username: xiaoming
         method: POST
-        url: http://127.0.0.1:7777/reg/
+        url: ${ENV(host)}/reg/
     validate:
     -   eq:
         - status_code

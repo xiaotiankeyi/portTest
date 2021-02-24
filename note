@@ -10,3 +10,9 @@ har2case .har  -2y      转化为Yaml文件
 
 hrun  .yml      执行用例
 hrun /path/to/testcase.yml --dot-env-path /path/to/.env --log-level debug
+
+yaml问件操作
+        extract:
+        export:
+        contains:
+        output:

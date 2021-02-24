@@ -3,14 +3,13 @@ config:
     variables: {}
 
 teststeps:
--   name: /login/
-    testcase: login.yml
-        #    export:
-        #        - assess_token
+-   name: 登录接口
+    testcase: login.yml         #调取登录接口并执行获取token
+
     output:         #控制台输出变量值
         - assess_token
 
--   name: /select/
+-   name: 查询接口
     request:
         headers:
             Postman-Token: 121546e2-4bce-4038-9593-590db35b9b0d
