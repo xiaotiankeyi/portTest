@@ -1,0 +1,46 @@
+2021-02-24 22:46:44.853 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 删除相关部门, TestCase ID: 56c1472d-e172-4f15-b885-03d6dcc7720a
+2021-02-24 22:46:44.857 | INFO     | httprunner.runner:__run_step:292 - run step begin: 删除部门 >>>>>>
+2021-02-24 22:46:45.015 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.0.101, Port: 55175
+2021-02-24 22:46:45.016 | DEBUG    | httprunner.client:request:194 - server IP: 183.3.234.106, Port: 443
+2021-02-24 22:46:45.018 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : https://qyapi.weixin.qq.com/cgi-bin/department/delete?access_token=TiE_YAxUZ7WFUhQlFTLrfDaFObAsUWBnmzupJw_IDhxsDe09SXi5qOgv2AymjilbgdUacdvDv9FdOKryvKL9lkEuKP5l8m3dB6YlamoRAkvxay_ksbDB8_DNARqIXqQeBYlCZ7Q5vihd6OlxYvtOaywH6AS1FU0M8oJdbiARG-VWPRlmFE3IU3ALapvSbnktqU3XOqkJVNOMua1WamZ5TQ&id=2
+headers  : {
+    "User-Agent": "PostmanRuntime/7.26.10",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Postman-Token": "38e3a0a4-ad0d-4a45-9877-9102dad47fcc",
+    "HRUN-Request-ID": "HRUN-56c1472d-e172-4f15-b885-03d6dcc7720a-004869"
+}
+cookies  : {}
+body     : None
+
+2021-02-24 22:46:45.020 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx",
+    "Date": "Wed, 24 Feb 2021 14:46:44 GMT",
+    "Content-Type": "application/json; charset=UTF-8",
+    "Content-Length": "32",
+    "Connection": "keep-alive",
+    "Error-Code": "0",
+    "Error-Msg": "deleted"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json; charset=UTF-8
+body     : {
+    "errcode": 0,
+    "errmsg": "deleted"
+}
+
+2021-02-24 22:46:45.026 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 146.0 ms, response_length: 0 bytes
+2021-02-24 22:46:45.027 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2021-02-24 22:46:45.029 | INFO     | httprunner.response:validate:246 - assert headers."Content-Type" equal application/json; charset=UTF-8(str)	==> pass
+2021-02-24 22:46:45.030 | INFO     | httprunner.response:validate:246 - assert body.errcode equal 0(int)	==> pass
+2021-02-24 22:46:45.031 | INFO     | httprunner.response:validate:246 - assert body.errmsg equal deleted(str)	==> pass
+2021-02-24 22:46:45.032 | INFO     | httprunner.runner:__run_step:304 - run step end: 删除部门 <<<<<<
+

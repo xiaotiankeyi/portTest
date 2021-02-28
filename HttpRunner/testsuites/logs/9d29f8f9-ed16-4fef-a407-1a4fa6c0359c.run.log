@@ -1,0 +1,55 @@
+2021-02-24 22:46:44.542 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 创建部门, TestCase ID: 9d29f8f9-ed16-4fef-a407-1a4fa6c0359c
+2021-02-24 22:46:44.577 | INFO     | httprunner.runner:__run_step:292 - run step begin: 创建部门 >>>>>>
+2021-02-24 22:46:44.777 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.0.101, Port: 55174
+2021-02-24 22:46:44.778 | DEBUG    | httprunner.client:request:194 - server IP: 183.3.234.106, Port: 443
+2021-02-24 22:46:44.780 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=TiE_YAxUZ7WFUhQlFTLrfDaFObAsUWBnmzupJw_IDhxsDe09SXi5qOgv2AymjilbgdUacdvDv9FdOKryvKL9lkEuKP5l8m3dB6YlamoRAkvxay_ksbDB8_DNARqIXqQeBYlCZ7Q5vihd6OlxYvtOaywH6AS1FU0M8oJdbiARG-VWPRlmFE3IU3ALapvSbnktqU3XOqkJVNOMua1WamZ5TQ
+headers  : {
+    "User-Agent": "python-requests/2.23.0",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json",
+    "HRUN-Request-ID": "HRUN-9d29f8f9-ed16-4fef-a407-1a4fa6c0359c-004610",
+    "Content-Length": "103"
+}
+cookies  : {}
+body     : {
+    "id": 2,
+    "name": "\u5317\u4eac\u7814\u53d1\u4e2d\u5fc3",
+    "name_en": "RDBJ",
+    "order": 1,
+    "parentid": 1
+}
+
+2021-02-24 22:46:44.782 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx",
+    "Date": "Wed, 24 Feb 2021 14:46:43 GMT",
+    "Content-Type": "application/json; charset=UTF-8",
+    "Content-Length": "39",
+    "Connection": "keep-alive",
+    "Error-Code": "0",
+    "Error-Msg": "created"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json; charset=UTF-8
+body     : {
+    "errcode": 0,
+    "errmsg": "created",
+    "id": 2
+}
+
+2021-02-24 22:46:44.784 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 167.0 ms, response_length: 0 bytes
+2021-02-24 22:46:44.786 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2021-02-24 22:46:44.787 | INFO     | httprunner.response:validate:246 - assert headers."Content-Type" equal application/json; charset=UTF-8(str)	==> pass
+2021-02-24 22:46:44.789 | INFO     | httprunner.response:validate:246 - assert body.errcode equal 0(int)	==> pass
+2021-02-24 22:46:44.790 | INFO     | httprunner.response:validate:246 - assert body.errmsg equal created(str)	==> pass
+2021-02-24 22:46:44.792 | INFO     | httprunner.response:validate:246 - assert body.id equal 2(int)	==> pass
+2021-02-24 22:46:44.793 | INFO     | httprunner.runner:__run_step:304 - run step end: 创建部门 <<<<<<
+

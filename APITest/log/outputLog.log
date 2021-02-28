@@ -1,0 +1,24 @@
+2021-02-28 15:55:25 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-02-28 15:55:25 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /reg/ HTTP/1.1" 200 44
+2021-02-28 15:55:25 PM\DEBUG\test_readcase.py:130: 测试点[注册成功]接口测试失败,body返回msg[用户已存在],错误信息'注册成功！' != '用户已存在'
+- 注册成功！
++ 用户已存在
+
+2021-02-28 15:55:25 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-02-28 15:55:25 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /reg/ HTTP/1.1" 200 44
+2021-02-28 15:55:25 PM\DEBUG\test_readcase.py:120: 测试点[注册失败]接口测试成功,body返回msg[用户已存在]
+2021-02-28 15:55:25 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-02-28 15:55:25 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 85
+2021-02-28 15:55:25 PM\DEBUG\test_readcase.py:92: [登录]接口测试成功,返回msg[用户登录成功！！]
+2021-02-28 15:57:17 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-02-28 15:57:17 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /reg/ HTTP/1.1" 200 44
+2021-02-28 15:57:17 PM\DEBUG\test_readcase.py:130: 测试点[注册成功]接口测试失败,body返回msg[用户已存在],错误信息'注册成功！' != '用户已存在'
+- 注册成功！
++ 用户已存在
+
+2021-02-28 15:57:17 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-02-28 15:57:17 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /reg/ HTTP/1.1" 200 44
+2021-02-28 15:57:17 PM\DEBUG\test_readcase.py:120: 测试点[注册失败]接口测试成功,body返回msg[用户已存在]
+2021-02-28 15:57:17 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-02-28 15:57:17 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 85
+2021-02-28 15:57:17 PM\DEBUG\test_readcase.py:92: [登录]接口测试成功,返回msg[用户登录成功！！]

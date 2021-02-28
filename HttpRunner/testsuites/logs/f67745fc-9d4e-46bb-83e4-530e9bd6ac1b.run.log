@@ -1,0 +1,71 @@
+2021-02-24 22:58:48.014 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 删除相关部门, TestCase ID: f67745fc-9d4e-46bb-83e4-530e9bd6ac1b
+2021-02-24 22:58:48.017 | INFO     | httprunner.runner:__run_step:292 - run step begin: 删除部门 >>>>>>
+2021-02-24 22:58:48.124 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.0.101, Port: 55419
+2021-02-24 22:58:48.128 | DEBUG    | httprunner.client:request:194 - server IP: 183.3.224.149, Port: 443
+2021-02-24 22:58:48.130 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : https://qyapi.weixin.qq.com/cgi-bin/department/delete?access_token=TiE_YAxUZ7WFUhQlFTLrfDaFObAsUWBnmzupJw_IDhxsDe09SXi5qOgv2AymjilbgdUacdvDv9FdOKryvKL9lkEuKP5l8m3dB6YlamoRAkvxay_ksbDB8_DNARqIXqQeBYlCZ7Q5vihd6OlxYvtOaywH6AS1FU0M8oJdbiARG-VWPRlmFE3IU3ALapvSbnktqU3XOqkJVNOMua1WamZ5TQ&id=2
+headers  : {
+    "User-Agent": "PostmanRuntime/7.26.10",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Postman-Token": "38e3a0a4-ad0d-4a45-9877-9102dad47fcc",
+    "HRUN-Request-ID": "HRUN-f67745fc-9d4e-46bb-83e4-530e9bd6ac1b-728022"
+}
+cookies  : {}
+body     : None
+
+2021-02-24 22:58:48.132 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx",
+    "Date": "Wed, 24 Feb 2021 14:58:47 GMT",
+    "Content-Type": "application/json; charset=UTF-8",
+    "Content-Length": "194",
+    "Connection": "keep-alive",
+    "Error-Code": "60123",
+    "Error-Msg": "invalid party id, hint: [1614178727_147_7c60788e25971abc06c9ef960c17d567], from ip: 14.120.108.56, more info at https://open.work.weixin.qq.com/devtool/query?e=60123"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json; charset=UTF-8
+body     : {
+    "errcode": 60123,
+    "errmsg": "invalid party id, hint: [1614178727_147_7c60788e25971abc06c9ef960c17d567], from ip: 14.120.108.56, more info at https://open.work.weixin.qq.com/devtool/query?e=60123"
+}
+
+2021-02-24 22:58:48.133 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 102.0 ms, response_length: 0 bytes
+2021-02-24 22:58:48.135 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2021-02-24 22:58:48.136 | INFO     | httprunner.response:validate:246 - assert headers."Content-Type" equal application/json; charset=UTF-8(str)	==> pass
+2021-02-24 22:58:48.137 | ERROR    | httprunner.response:validate:263 - assert body.errcode equal 0(int)	==> fail
+check_item: body.errcode
+check_value: 60123(int)
+assert_method: equal
+expect_value: 0(int)
+2021-02-24 22:58:48.138 | ERROR    | httprunner.response:validate:263 - assert body.errmsg equal deleted(str)	==> fail
+check_item: body.errmsg
+check_value: invalid party id, hint: [1614178727_147_7c60788e25971abc06c9ef960c17d567], from ip: 14.120.108.56, more info at https://open.work.weixin.qq.com/devtool/query?e=60123(str)
+assert_method: equal
+expect_value: deleted(str)
+2021-02-24 22:58:48.139 | ERROR    | httprunner.runner:log_req_resp_details:194 - 
+******************************** DETAILED REQUEST & RESPONSE ********************************
+====== request details ======
+url: https://qyapi.weixin.qq.com/cgi-bin/department/delete
+method: GET
+headers: {'Postman-Token': '38e3a0a4-ad0d-4a45-9877-9102dad47fcc', 'User-Agent': 'PostmanRuntime/7.26.10', 'HRUN-Request-ID': 'HRUN-f67745fc-9d4e-46bb-83e4-530e9bd6ac1b-728022'}
+params: {'access_token': 'TiE_YAxUZ7WFUhQlFTLrfDaFObAsUWBnmzupJw_IDhxsDe09SXi5qOgv2AymjilbgdUacdvDv9FdOKryvKL9lkEuKP5l8m3dB6YlamoRAkvxay_ksbDB8_DNARqIXqQeBYlCZ7Q5vihd6OlxYvtOaywH6AS1FU0M8oJdbiARG-VWPRlmFE3IU3ALapvSbnktqU3XOqkJVNOMua1WamZ5TQ', 'id': 2}
+data: None
+cookies: {}
+timeout: 120
+allow_redirects: True
+verify: False
+json: None
+
+====== response details ======
+status_code: 200
+headers: {'Server': 'nginx', 'Date': 'Wed, 24 Feb 2021 14:58:47 GMT', 'Content-Type': 'application/json; charset=UTF-8', 'Content-Length': '194', 'Connection': 'keep-alive', 'Error-Code': '60123', 'Error-Msg': 'invalid party id, hint: [1614178727_147_7c60788e25971abc06c9ef960c17d567], from ip: 14.120.108.56, more info at https://open.work.weixin.qq.com/devtool/query?e=60123'}
+body: '{"errcode":60123,"errmsg":"invalid party id, hint: [1614178727_147_7c60788e25971abc06c9ef960c17d567], from ip: 14.120.108.56, more info at https://open.work.weixin.qq.com/devtool/query?e=60123"}'
+
