@@ -1,8 +1,16 @@
 config:
-    name: 针对部门接口增删改查操作
-    variables: {}
+  name: 针对部门接口增删改查操作
+  variables: {}
 
-testcases:
--
-    name: 查找部门
-    testcase: ..\testcases\wechat_access_token.yml
+teststeps:
+  - name: 查找部门
+      testcase: ..\testcases\wechat_section_select.yml
+
+  - name: 创建部门
+      testcase: ..\testcases\wechat_section_create.yml
+
+  - name: 修改部门信息
+      testcase: ..\testcases\wechat_section_alter.yml
+
+  - name: 删除相关部门
+      testcase: ..\testcases\wechat_section_delect.yml

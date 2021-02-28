@@ -1,27 +1,21 @@
 config:
   name: testcase description
-  variables:
-    new_tagname: UI设计部门
+  variables: {}
+  export:
+    - tag_id
 teststeps:
-
   - name: 获取标签列表
-    testcase: wechat_taglist_find.yml
-    output:
-      - tag_id
-
-  - name: 更新标签名字
     request:
       headers:
-        Content-Type: application/json
-#        Postman-Token: 23ca996d-536f-42a7-9e43-5e1596e0927b
+#        Postman-Token: a2e44e63-cf13-441a-bc08-2f3d71cea91c
         User-Agent: PostmanRuntime/7.26.10
-      json:
-        tagid: ${tag_id}
-        tagname: ${new_tagname}
-      method: POST
+      method: GET
       params:
         access_token: ${rand_yaml_data(access_token)}
-      url: ${rand_yaml_data(host)}/cgi-bin/tag/update
+      url: ${rand_yaml_data(host)}/cgi-bin/tag/list
+
+    extract:
+      - tag_id: content.taglist[0].tagid
     validate:
       - eq:
           - status_code
@@ -34,4 +28,11 @@ teststeps:
           - 0
       - eq:
           - content.errmsg
-          - updated
+          - ok
+      #    -   eq:
+      #        - content.taglist[0].tagname
+      #        - UI部门
+
+      - contains:       #预期结果是否被包含在实际结果中
+          - content.taglist[0]
+          - tagname

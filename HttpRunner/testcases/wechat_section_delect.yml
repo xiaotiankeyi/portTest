@@ -1,27 +1,17 @@
 config:
   name: testcase description
-  variables:
-    new_tagname: UI设计部门
+  variables: {}
 teststeps:
-
-  - name: 获取标签列表
-    testcase: wechat_taglist_find.yml
-    output:
-      - tag_id
-
-  - name: 更新标签名字
+  - name: 删除部门
     request:
       headers:
-        Content-Type: application/json
-#        Postman-Token: 23ca996d-536f-42a7-9e43-5e1596e0927b
+#        Postman-Token: 38e3a0a4-ad0d-4a45-9877-9102dad47fcc
         User-Agent: PostmanRuntime/7.26.10
-      json:
-        tagid: ${tag_id}
-        tagname: ${new_tagname}
-      method: POST
+      method: GET
       params:
         access_token: ${rand_yaml_data(access_token)}
-      url: ${rand_yaml_data(host)}/cgi-bin/tag/update
+        id: ${rand_yaml_data(subdivision_id)}       #获取需要删除部门的id
+      url: ${rand_yaml_data(host)}/cgi-bin/department/delete
     validate:
       - eq:
           - status_code
@@ -34,4 +24,4 @@ teststeps:
           - 0
       - eq:
           - content.errmsg
-          - updated
+          - deleted

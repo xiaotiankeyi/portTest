@@ -34,7 +34,8 @@ def my_db(sql):
 @server.route('/index/', methods=['get'])  # 接口装饰器，get请求
 def index():
     res = {'msg': '这是我开发的第一个接口', 'msg_code': 0}  # 定义一个字典
-    return json.dumps(res, ensure_ascii=False)  # 将字典转化成json串，ensure_ascii=False将unicode转成十进制
+    # 将字典转化成json串，ensure_ascii=False将unicode转成十进制
+    return json.dumps(res, ensure_ascii=False)
 
 
 @server.route('/reg/', methods=['post'])
@@ -47,10 +48,10 @@ def reg():
     :return:
     """
     get_data = flask.request.get_data()
-    # print(type(get_data), get_data)
+    # print(type(get_data), get_data)       #获取前端请求信息
 
     get_data = json.loads(get_data)
-    print(type(get_data), get_data)
+    print(type(get_data), get_data)  # 把前端请求信息转化为dict
 
     username = get_data.get('username')
     pwd = get_data.get('password')
@@ -64,7 +65,10 @@ def reg():
         if my_db(sql):
             res = {'msg': '用户已存在', 'msg_code': 2001}
         else:
-            tonke = ''.join(random.sample('0123456789dsjfhlkfnifsdfsdfsfugfwf', 20))  # 生成随机tonke
+            tonke = ''.join(
+                random.sample(
+                    '0123456789dsjfhlkfnifsdfsdfsfugfwf',
+                    20))  # 生成随机tonke
 
             insert_sql = 'insert into my_user (username,password,tonke) values ("%s","%s","%s");' % (
                 username, pwd, tonke)
@@ -117,7 +121,10 @@ def login():
             return json.dumps(res, ensure_ascii=False)
 
         elif my_db(pwdSql)[0]['password'] == pwd:
-            res = {'msg': '用户登录成功！！', 'tonke': my_db(tonkeSql)[0]['tonke'], 'msg_code': 200}
+            res = {
+                'msg': '用户登录成功！！',
+                'tonke': my_db(tonkeSql)[0]['tonke'],
+                'msg_code': 200}
             return json.dumps(res, ensure_ascii=False)  # 把字典转化为json
 
 
@@ -134,7 +141,8 @@ def select():
     tonke = flask.request.values.get('tonke')
 
     tonkeSql = 'select tonke from my_user;'  # 查询用户tonke值
-    userSql = 'SELECT username FROM my_user LIMIT %d;' % int(quantity)  # 查询指定多少行数据
+    userSql = 'SELECT username FROM my_user LIMIT %d;' % int(
+        quantity)  # 查询指定多少行数据
 
     # print(quantity, tonke)
     #

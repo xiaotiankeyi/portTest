@@ -1,5 +1,5 @@
 parentid: 1     #父部门id
-subdivision_id: 3     #子部门id
+subdivision_id: 2     #子部门id
 host: https://qyapi.weixin.qq.com     #域名
 corpid: ww96523b6dd1de7e43        #用户ID
 corpsecret: jLDLOaUeCoXHOGDMjdkP5AVXh0pzYqOO-RWwYynBlGw     #应用ID

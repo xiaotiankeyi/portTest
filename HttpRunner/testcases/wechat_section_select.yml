@@ -7,7 +7,7 @@ teststeps:
   - name: 获取部门列表
     request:
       headers:
-        Postman-Token: 6e33e13b-1815-434e-9af7-89dd95ff39a8
+#        Postman-Token: 6e33e13b-1815-434e-9af7-89dd95ff39a8
         User-Agent: PostmanRuntime/7.26.10
       method: GET
       params:

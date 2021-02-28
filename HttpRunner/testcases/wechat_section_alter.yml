@@ -1,0 +1,41 @@
+config:
+  name: testcase description
+  variables:
+#    id: ${rand_yaml_data(subdivision_id)}       #获取需要修改部门的id
+#    parentid: ${rand_yaml_data(parentid)}       #获取父部门的id
+teststeps:
+
+  #-   name: 获取父部门列表
+  #    testcase: wechat_section_select.yml
+  #    output:
+  #        - parentid
+
+  - name: 更新部门信息
+    request:
+      headers:
+        Content-Type: application/json
+      #            Postman-Token: 98c60d94-c5af-4963-b5d6-cfd03c6dc1ab
+                  User-Agent: PostmanRuntime/7.26.10
+      json:
+        id: ${rand_yaml_data(subdivision_id)}
+        name: 修改北京研发中心
+        name_en: RDBJ
+        order: 1
+        parentid: ${rand_yaml_data(parentid)}
+      method: POST
+      params:
+        access_token: ${rand_yaml_data(access_token)}
+      url: ${rand_yaml_data(host)}/cgi-bin/department/update
+    validate:
+      - eq:
+          - status_code
+          - 200
+      - eq:
+          - headers.Content-Type
+          - application/json; charset=UTF-8
+      - eq:
+          - content.errcode
+          - 0
+      - eq:
+          - content.errmsg
+          - updated
