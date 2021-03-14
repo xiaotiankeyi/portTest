@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
-    <file url="PROJECT" charset="GBK" />
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/pytest_project/conftest.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pytest_project/public/base_module.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pytest_project/run_tests.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pytest_project/test_data/login_test.yaml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pytest_project/testcases/login.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pytest_project/testcases/test_login.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pytest_project/testcases/test_register.py" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

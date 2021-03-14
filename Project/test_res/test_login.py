@@ -44,7 +44,7 @@ class Testlogin(startup):
                 os.path.dirname(
                     os.path.abspath(__file__))) +
             '\\public' +
-            '\\data' +
+            '\\test_data' +
             '\\user.json'))
     def test_data(self, key, key2, key3, key4, num):
         self.loginfunc(key, key2, key3, key4, num)

@@ -20,7 +20,7 @@ report_file = os.path.join(report_xpath + '\\' + now_date + 'result.html')
 print(report_file)
 
 discover = unittest.defaultTestLoader.discover(start_dir=run_xpath,
-                                               pattern='wechat_access_token.py')
+                                               pattern='test_access_token.py')
 
 if __name__ == "__main__":
     with open(file=report_file, mode='ab+') as f:

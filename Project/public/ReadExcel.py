@@ -9,7 +9,7 @@ from xlutils.copy import copy
 
 class HandleExcel():
     """封装操作excel的方法"""
-    file_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data\\Testdata.xlsx')
+    file_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'test_data\\Testdata.xlsx')
 
     def __init__(self, file=file_dir, sheet_id=0):
         self.file = file

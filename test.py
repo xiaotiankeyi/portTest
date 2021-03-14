@@ -21,9 +21,11 @@ g = {"errcode": 0,
                      "order": 100000000}]}
 print(g["department"][0]['id'])
 
-f = {'msg': '用户登录成功！！', 'data': [{'tonke': '0f3ufjfsswdgfs81isd2'}], 'msg_code': 200}
+f = {'msg': '用户登录成功！！', 'test_data': [{'tonke': '0f3ufjfsswdgfs81isd2'}], 'msg_code': 200}
 
 # g = {
-#     "tonke": ['data', 0, 'tonke'],
+#     "tonke": ['test_data', 0, 'tonke'],
 #     "msg": "msg"
 # }
+import os
+print(os.environ)

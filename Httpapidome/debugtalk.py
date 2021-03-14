@@ -26,7 +26,7 @@ def login():
     )
 
     # response = requests.request(method='post', url=url,
-    #                             verify=False, data=m, headers={'Content-Type': m.content_type})
+    #                             verify=False, test_data=m, headers={'Content-Type': m.content_type})
 
     # a = response.text        #获取cookie并返回
     # return a

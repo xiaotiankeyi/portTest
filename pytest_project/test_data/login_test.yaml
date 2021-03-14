@@ -1,0 +1,26 @@
+-
+    name: 用户登录成功
+    request:
+        headers:
+            Content-Type: application/json
+            User-Agent: PostmanRuntime/7.26.10
+        json:
+            password: 123456
+            username: jack
+        method: POST
+        url: /login/
+    validate:
+        equal: 用户登录成功
+-
+    name: 用户登录失败之用户不存在
+    request:
+        headers:
+            Content-Type: application/json
+            User-Agent: PostmanRuntime/7.26.10
+        json:
+            password: 123456
+            username: jack3232
+        method: POST
+        url: /login/
+    validate:
+        equal: 用户不存在,该用户未注册

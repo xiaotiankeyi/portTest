@@ -9,8 +9,8 @@ from APITest.public.requestway import RunMain
 from APITest.public.start import startup
 
 Base_path = os.path.dirname(os.path.dirname(__file__))
-file_path = os.path.join(Base_path + '/data/Testdata.xlsx')
-yaml_path = os.path.join(Base_path + '/data/config_data.yaml')
+file_path = os.path.join(Base_path + '/test_data/Testdata.xlsx')
+yaml_path = os.path.join(Base_path + '/test_data/config_data.yaml')
 log_path = os.path.join(Base_path + '/log/outputLog.log')
 
 
@@ -24,7 +24,7 @@ class Testcase(startup):
     ws = openpyxl.load_workbook(file)
     df = ws.active
 
-    def test_readcase(self):
+    def test_case_01(self):
 
         for k in range(2, 5):
             self.data_list = {
@@ -138,7 +138,7 @@ class Testcase(startup):
 
 if __name__ == "__main__":
     a = Testcase()
-    a.test_readcase()
+    a.test_case_01()
     # input_data = rand_yaml_data(file=yaml_path, key='db')  # 向yaml文件读取依赖值
     # print(input_data)
     # logger.debug('测试')

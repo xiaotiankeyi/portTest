@@ -73,9 +73,9 @@ def reg():
             insert_sql = 'insert into my_user (username,password,tonke) values ("%s","%s","%s");' % (
                 username, pwd, tonke)
             my_db(insert_sql)
-            res = {'msg': '注册成功！', 'msg_code': 0}
+            res = {'msg': '注册成功', 'msg_code': 0}
     else:
-        res = {'msg': '必填字段未填，请查看接口文档！', 'msg_code': 1001}
+        res = {'msg': '必填字段未填，请查看接口文档', 'msg_code': 1001}
         # 1001必填字段未填
     return json.dumps(res, ensure_ascii=False)
 
@@ -98,7 +98,7 @@ def login():
         get_data = flask.request.get_data()
 
         get_data = json.loads(get_data)
-        # print(type(get_data), get_data)
+        print(type(get_data), get_data)
 
         username = get_data.get('username')
         pwd = get_data.get('password')
@@ -122,7 +122,7 @@ def login():
 
         elif my_db(pwdSql)[0]['password'] == pwd:
             res = {
-                'msg': '用户登录成功！！',
+                'msg': '用户登录成功',
                 'tonke': my_db(tonkeSql)[0]['tonke'],
                 'msg_code': 200}
             return json.dumps(res, ensure_ascii=False)  # 把字典转化为json
@@ -149,9 +149,9 @@ def select():
     # print(my_db(tonkeSql))
 
     if tonke in str(my_db(tonkeSql)):
-        res = {'msg': '查询成功!', 'data': my_db(userSql), 'msg_code': 200}
+        res = {'msg': '查询成功', 'test_data': my_db(userSql), 'msg_code': 200}
     else:
-        res = {'msg': '查询失败,未授权!', 'msg_code': 20001}
+        res = {'msg': '查询失败,未授权', 'msg_code': 20001}
 
     return json.dumps(res, ensure_ascii=False)
 

@@ -13,7 +13,7 @@ teststeps:      #测试步骤
         url: ${ENV(host)}/index/
         #params:
         #cookies:
-        #data:
+        #test_data:
         #json:
     #extract:        #提取响应中的返回值
 

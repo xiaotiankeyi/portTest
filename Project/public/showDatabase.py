@@ -19,7 +19,7 @@ def mysql(sql, way):
     elif way == 'stop':
         conn.commit()
 
-    # data = obj.fetchmany(2)      #显示多条数据
+    # test_data = obj.fetchmany(2)      #显示多条数据
 
 
 if __name__ =="__main__":

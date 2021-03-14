@@ -7,7 +7,7 @@ import yaml
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-yaml_path = os.path.join(base_path + '/Testhttprunner/data/' + 'yaml_Configdata.yaml')
+yaml_path = os.path.join(base_path + '/Testhttprunner/test_data/' + 'yaml_Configdata.yaml')
 
 
 def add_yaml_data(key, value):
@@ -25,7 +25,7 @@ def rand_yaml_data(key=None):
     """
     with open(file=yaml_path, mode='r', encoding='utf-8') as f:
         data = yaml.load(f)
-        # print(type(data), data[key])
+        # print(type(test_data), test_data[key])
         f.close()
         return data[key]
 

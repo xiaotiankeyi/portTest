@@ -5,14 +5,7 @@ import requests
 class RunMain():
 
     def send_get(self, url, data, headers, cookies):
-        """
-        封装get请求方式
-        :param url: url
-        :param data: 请求数据
-        :param headers: 请求头
-        :param cookies: 请求cookie
-        :return:
-        """
+        """封装get请求方式"""
         res = requests.get(
             url=url,
             params=data,
@@ -28,14 +21,7 @@ class RunMain():
         #     ensure_ascii=False)
 
     def send_post(self, url, data, headers, cookies):
-        """
-        封装port请求方法
-        :param url: url
-        :param data: 请求数据
-        :param headers: 请求头
-        :param cookies: 请求cookies
-        :return:
-        """
+        """封装port请求方法"""
         Ares = requests.post(
             url=url,
             data=data,
