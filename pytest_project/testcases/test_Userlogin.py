@@ -16,6 +16,7 @@ class Testlogin(startup):
         print(response)
 
         assert value['validate']['equal'] == response['msg']
+        logger.info("{}请求,响应body{}".format(url, response))
 
     case_data = rand_excel()
     @pytest.mark.parametrize(
@@ -62,6 +63,6 @@ class Testlogin(startup):
 
 
 if __name__ == "__main__":
-    pytest.main(['-vs', '-q', 'login.py::Testlogin::test_case_01'])
-    # pytest.main(['-vs', 'login.py::Testlogin::test_case_02', '--alluredir', 'report'])
+    pytest.main(['-vs', '-q', 'test_Userlogin.py::Testlogin::test_case_01', '--html=report.html'])
+    # pytest.main(['-vs', 'test_Userlogin.py::Testlogin::test_case_02', '--alluredir', 'report'])
     # os.system('allure generate --clean report/ -o report_result/html')

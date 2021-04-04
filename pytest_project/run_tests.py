@@ -18,7 +18,7 @@ def init_env(now_time):
 
 def run(m):
     if m is None or m == "run":
-        log.info("回归模式，开始执行✈✈！")
+        logger.info("回归模式，开始执行✈✈！")
         now_time = time.strftime("%Y_%m_%d_%H_%M_%S")
         init_env(now_time)
         html_report = os.path.join(REPORT_DIR, now_time, "report.html")
@@ -29,7 +29,7 @@ def run(m):
                      "--self-contained-html",
                      "--maxfail", max_fail,
                      "--reruns", rerun])
-        log.info("运行结束，生成测试报告♥❤！")
+        logger.info("运行结束，生成测试报告♥❤！")
     elif m == "debug":
         print("debug模式，开始执行！")
         pytest.main(["-v", "-s", cases_path])
@@ -49,9 +49,9 @@ def Runner():
 #allure generate --clean report/ -o report_result/html
 if __name__ == '__main__':
     # run(m='run')
-    os.system("rd report_result /s/q")
-    os.system("rd report /s/q")
+    # os.system("rd report_result /s/q")
+    # os.system("rd report /s/q")
     # Runner()
-    # pytest.main(['-vs', 'pytest_project::testcases::login.py::Testlogin::test_case_01', '--alluredir report'])
+    # pytest.main(['-vs', 'pytest_project::testcases::test_Userlogin.py::Testlogin::test_case_01', '--alluredir report'])
     # os.system('allure generate --clean report/ -o report_result/html')
     pass

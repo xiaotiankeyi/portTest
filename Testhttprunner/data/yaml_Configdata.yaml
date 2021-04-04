@@ -1,6 +1,0 @@
-parentid: 1     #父部门id
-subdivision_id: 2     #子部门id
-host: https://qyapi.weixin.qq.com     #域名
-corpid: ww96523b6dd1de7e43        #用户ID
-corpsecret: jLDLOaUeCoXHOGDMjdkP5AVXh0pzYqOO-RWwYynBlGw     #应用ID
-access_token: MKZ-bTwDnZ8bIgrcWSTkDq3l4Y37GkkgXOfMFiyJX7VV10E9y-TPwm_carOQ-wcX7n3L_3ty5CU0a1aBDaFZX0osgEMEpfKIrvHhXIDvf6fM7WzT7zmNfEoLMB1olhsGQEsEVm6VMptdb3a5xV45YUcK_X2H-G6kPxZItxwIiqvPv06IqhdLrYBIGGGgBl9Jqug39-38O4ywr0V3Rz5Utg

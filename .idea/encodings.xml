@@ -5,7 +5,7 @@
     <file url="file://$PROJECT_DIR$/pytest_project/public/base_module.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pytest_project/run_tests.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pytest_project/test_data/login_test.yaml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pytest_project/testcases/login.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pytest_project/testcases/test_Userlogin.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pytest_project/testcases/test_login.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pytest_project/testcases/test_register.py" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />

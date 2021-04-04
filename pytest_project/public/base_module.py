@@ -23,7 +23,7 @@ log_path = os.path.join(base_path + '/log/outputLog.log')
 Excel_path = os.path.join(base_path + '/test_data/Testdata.xlsx')
 #测试数据保存目录
 test_data_path = os.path.join(base_path + '/test_data/test_data.yaml')
-log = handle(file=log_path)
+logger = handle(file=log_path)
 startup = test_period.startup
 
 request = RunMain()
