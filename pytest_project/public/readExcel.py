@@ -5,15 +5,17 @@ from pytest_project.public.base_module import *
 class HandleExcel():
     """封装操作excel的方法"""
 
-    def __init__(self, file=Excel_path, sheet_id=0):
+    def __init__(self, file=Excel_path, sheet_id=None, sheet_name=None):
         self.file = file
         self.sheet_id = sheet_id
+        self.sheet_name = sheet_name
         self.data = self.get_Excel()
 
     # 打开文件,获取某一页sheet对象
     def get_Excel(self):
         data = xlrd.open_workbook(self.file)
-        sheet = data.sheet_by_index(self.sheet_id)
+        # sheet = data.sheet_by_index(self.sheet_id)
+        sheet = data.sheet_by_name(self.sheet_name)
         return sheet
 
     # 获取excel数据行数
@@ -82,7 +84,7 @@ class HandleExcel():
 
 
 if __name__ == '__main__':
-    test = HandleExcel()
+    test = HandleExcel(sheet_name='接口测试')
     # print(test.get_Excel().name)
     # print(test.get_rows())
     # print(test.get_value(0,8))

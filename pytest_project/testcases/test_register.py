@@ -3,7 +3,7 @@ from pytest_project.public.readExcel import HandleExcel
 
 @allure.feature("注册模块功能")
 class Testregister(startup):
-    obj = HandleExcel()
+    obj = HandleExcel(sheet_name='接口测试')
 
     @allure.story("注册失败")
     @allure.title("注册失败之用户以存在")

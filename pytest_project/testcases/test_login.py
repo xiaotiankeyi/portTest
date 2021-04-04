@@ -1,10 +1,9 @@
 from pytest_project.public.base_module import *
 from pytest_project.public.readExcel import HandleExcel
 
-
 @allure.feature("测试登录场景")   #描述被测试产品需求
 class Testlogin(startup):
-    obj = HandleExcel()
+    obj = HandleExcel(sheet_name='接口测试')
 
     # @allure.step('登录失败用户名为空')  # 模块下的具体步骤，使测试用例在allure报告中能够更加详细的显示测试过程
     # @allure.story("登录失败")      #用于描述feature的用户场景，即测试需求分支功能
@@ -98,3 +97,4 @@ if __name__ == "__main__":
 
     # pytest -s -q --alluredir report生成allure报告数据
     # allure generate --clean report/ -o report_result/html把allure数据转化为html报告
+    pass

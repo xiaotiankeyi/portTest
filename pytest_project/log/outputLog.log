@@ -16,3 +16,39 @@
 2021-04-04 11:45:58 AM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
 2021-04-04 11:45:58 AM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 63
 2021-04-04 11:45:58 AM\INFO\test_Userlogin.py:19: /login/请求,响应body{'msg': '用户不存在,该用户未注册', 'msg_code': 2001}
+2021-04-04 13:20:05 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-04 13:20:06 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-04 13:20:07 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-04 13:20:08 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-04 13:20:09 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-04 13:32:21 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-04 13:33:17 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-04 13:33:17 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 50
+2021-04-04 13:33:17 PM\INFO\test_loginTest.py:17: http://127.0.0.1:7777/login/请求成功,body响应{'msg': '用户名不能为空', 'msg_code': 2001}
+2021-04-04 13:45:31 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-04 13:45:31 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 50
+2021-04-04 13:45:31 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-04 13:45:31 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 63
+2021-04-04 13:45:31 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-04 13:45:31 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 63
+2021-04-04 13:45:31 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-04 13:45:31 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 89
+2021-04-04 13:47:24 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-04 13:47:24 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 50
+2021-04-04 13:50:44 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-04 13:50:44 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 50
+2021-04-04 13:50:44 PM\INFO\test_loginTest.py:17: http://127.0.0.1:7777/login/请求成功,body响应{'msg': '用户名不能为空', 'msg_code': 2001}
+2021-04-04 13:55:57 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-04 13:55:57 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 50
+2021-04-04 13:55:57 PM\INFO\test_loginTest.py:19: /login/请求成功,body响应{'msg': '用户名不能为空', 'msg_code': 2001}
+2021-04-04 13:58:43 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-04 13:58:43 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 50
+2021-04-04 13:58:43 PM\INFO\test_loginTest.py:20: /login/请求成功,body响应{'msg': '用户名不能为空', 'msg_code': 2001}
+2021-04-04 14:00:05 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-04 14:00:05 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 50
+2021-04-04 14:00:05 PM\INFO\test_loginTest.py:20: /login/请求成功,body响应{'msg': '用户名不能为空', 'msg_code': 2001}
+2021-04-04 14:00:05 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-04 14:00:05 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 63
+2021-04-04 14:00:05 PM\INFO\test_loginTest.py:35: /login/请求成功,body响应{'msg': '用户不存在,该用户未注册', 'msg_code': 2001}
+2021-04-04 14:00:54 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-04 14:00:54 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /reg/ HTTP/1.1" 200 44
