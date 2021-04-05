@@ -73,7 +73,7 @@ def reg():
             insert_sql = 'insert into my_user (username,password,tonke) values ("%s","%s","%s");' % (
                 username, pwd, tonke)
             my_db(insert_sql)
-            res = {'msg': '注册成功', 'msg_code': 0}
+            res = {'msg': '注册成功', 'msg_code': 200}
     else:
         res = {'msg': '必填字段未填，请查看接口文档', 'msg_code': 1001}
         # 1001必填字段未填

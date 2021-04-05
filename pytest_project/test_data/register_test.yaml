@@ -1,0 +1,44 @@
+teststeps:
+    name: 用户注册成功
+    request:
+        headers:
+            Content-Type: application/json
+            User-Agent: PostmanRuntime/7.26.10
+        json:
+            password: 123456
+            username: jack
+        method: POST
+        url: /reg/
+    validate:
+        msg: 注册成功
+        msg_code: 200
+
+teststeps2:
+    name: 用户注册失败之用户名已存在
+    request:
+        headers:
+            Content-Type: application/json
+            User-Agent: PostmanRuntime/7.26.10
+        json:
+            password: 123456
+            username: jack
+        method: POST
+        url: /reg/
+    validate:
+        msg: 用户已存在
+        msg_code: 2001
+
+teststeps3:
+    name: 用户名必填字段为空
+    request:
+        headers:
+            Content-Type: application/json
+            User-Agent: PostmanRuntime/7.26.10
+        json:
+            password: 123456
+            username:
+        method: POST
+        url: /reg/
+    validate:
+        msg: 必填字段未填，请查看接口文档
+        msg_code: 1001

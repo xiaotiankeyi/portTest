@@ -52,3 +52,41 @@
 2021-04-04 14:00:05 PM\INFO\test_loginTest.py:35: /login/请求成功,body响应{'msg': '用户不存在,该用户未注册', 'msg_code': 2001}
 2021-04-04 14:00:54 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
 2021-04-04 14:00:54 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /reg/ HTTP/1.1" 200 44
+2021-04-05 14:33:10 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-05 14:33:10 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 89
+2021-04-05 14:33:10 PM\INFO\test_Userlogin.py:18: /login/请求,响应body{'msg': '用户登录成功', 'tonke': '4j03ff85ffgdf2fksnw71ss6uhsfld', 'msg_code': 200}
+2021-04-05 14:33:10 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-05 14:33:10 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 63
+2021-04-05 14:33:10 PM\INFO\test_Userlogin.py:18: /login/请求,响应body{'msg': '用户不存在,该用户未注册', 'msg_code': 2001}
+2021-04-05 14:34:50 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-05 14:34:50 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 50
+2021-04-05 14:34:50 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-05 14:34:50 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 63
+2021-04-05 14:34:50 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-05 14:34:50 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 63
+2021-04-05 14:34:50 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-05 14:34:50 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 89
+2021-04-05 14:35:02 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-05 14:35:02 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 50
+2021-04-05 14:35:02 PM\INFO\test_loginTest.py:20: /login/请求成功,body响应{'msg': '用户名不能为空', 'msg_code': 2001}
+2021-04-05 14:35:02 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-05 14:35:02 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 63
+2021-04-05 14:35:02 PM\INFO\test_loginTest.py:35: /login/请求成功,body响应{'msg': '用户不存在,该用户未注册', 'msg_code': 2001}
+2021-04-05 14:35:13 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-05 14:35:13 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /reg/ HTTP/1.1" 200 44
+2021-04-05 14:35:22 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-05 14:35:22 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 89
+2021-04-05 14:35:22 PM\INFO\test_Userlogin.py:18: /login/请求,响应body{'msg': '用户登录成功', 'tonke': '4j03ff85ffgdf2fksnw71ss6uhsfld', 'msg_code': 200}
+2021-04-05 14:35:22 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-05 14:35:22 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 63
+2021-04-05 14:35:22 PM\INFO\test_Userlogin.py:18: /login/请求,响应body{'msg': '用户不存在,该用户未注册', 'msg_code': 2001}
+2021-04-05 14:41:34 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-05 14:41:34 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 50
+2021-04-05 14:41:34 PM\INFO\test_loginTest.py:20: /login/请求成功,body响应{'msg': '用户名不能为空', 'msg_code': 2001}
+2021-04-05 14:41:34 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-05 14:41:34 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /login/ HTTP/1.1" 200 63
+2021-04-05 14:41:34 PM\INFO\test_loginTest.py:35: /login/请求成功,body响应{'msg': '用户不存在,该用户未注册', 'msg_code': 2001}
+2021-04-05 15:20:15 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-05 15:20:15 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /reg/ HTTP/1.1" 500 None
+2021-04-05 15:22:07 PM\DEBUG\connectionpool.py:225: Starting new HTTP connection (1): 127.0.0.1:7777
+2021-04-05 15:22:07 PM\DEBUG\connectionpool.py:437: http://127.0.0.1:7777 "POST /reg/ HTTP/1.1" 200 71
