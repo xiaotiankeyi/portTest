@@ -1,4 +1,6 @@
 import yaml
+import os
+import sys
 
 def add_yaml_data(file, key=None, values=None,):
     """
@@ -23,5 +25,11 @@ def rand_yaml_data(file, key=None):
 
 if __name__ == "__main__":
     # add_yaml_data()
-    print(rand_yaml_data(file='config_data.yaml', key='db'))
+    # print(os.getcwd())
+    # print(os.path.abspath(path=__file__))
+    # path_dir = os.path.join(os.getcwd(), "APITest", "data", "config_data.yaml")
+    # print(path_dir)
+    print(os.path.dirname(os.path.abspath(__file__)))
+
+    # print(rand_yaml_data(file="config_data.yaml", key='db'))
     pass
