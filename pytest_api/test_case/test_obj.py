@@ -4,26 +4,28 @@ import sys
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(os.path.join(os.getcwd(), "pytest_api"))
+from public.base_module import logger
 
 class TestProject(object):
     def test_01(self):
-        print("测试一")
+        logger.info("测试一")
         a = 3
         b = 4
         assert a != b
 
-    @pytest.mark.div     # run_02为标记
+    @pytest.mark.div     # div为标记
     def test_02(self):
-        print("测试二")
+        logger.info("测试二")
+
     
     def test_03(self):
         a = 3
         b = 4
         assert a != b
-        print("测试三")
+        logger.info("测试三")
 
     def test_04(self):
-        print("测试四")
+        logger.info("测试四")
 
 
 if __name__ == "__main__":

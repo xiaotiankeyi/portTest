@@ -4,8 +4,8 @@ import sys
 sys.path.append(os.path.join(os.getcwd(), "pytest_api"))
 
 import pytest
-from pytest_api.public.base_module import *
-from pytest_api.conftest import cases_path, rerun, max_fail, REPORT_DIR
+from public.base_module import *
+from conftest import cases_path, rerun, max_fail, REPORT_DIR
 
 '''
 说明:
@@ -60,6 +60,11 @@ if __name__ == '__main__':
     # os.system("rd report_result /s/q")
     # os.system("rd report /s/q")
     # Runner()
-    pytest.main(['-vs', 'pytest_api::test_case::test_obj.py', '--alluredir ./result_report'])
-    # os.system('allure generate --clean report/ -o report_result/html')
+    # pytest.main([cases_path,'-vs', "--html", "report/html/report.html"])
+    # pytest.main([cases_path,'-vs', "--alluredir", "report/allure/"])
+    # os.system('allure generate ./report/allure -o ./report/allure_redult/')
+    # os.system('allure open ./report/allure_redult/')
+    # os.system('allure serve ./report/allure/')
+
+
     pass

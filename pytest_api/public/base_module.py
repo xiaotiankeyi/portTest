@@ -5,15 +5,15 @@ sys.path.append(os.path.join(os.getcwd(), "pytest_api"))
 
 from public.test_period import startup
 from public.requestway import RunMain
-from config.read_operation import rand_yaml_apidata
+from config.read_operation import rand_json_apidata
 from config.read_operation import add_yaml_data
-from config.read_operation import rand_yaml_testdata
+from config.read_operation import rand_yaml_data
 from config.read_operation import clear_yaml_data
-from log.log import handle
+from logs.log import handle
 import json
 import pytest
 import time
-# import allure
+import allure
 import yaml
 
 
@@ -25,13 +25,13 @@ sys.path.append(base_path)
 testapi_data_path = os.path.join(base_path, 'test_data')
 
 #日志信息写入文件目录
-log_path = os.path.join(base_path, 'log', 'outputLog.log')
+log_path = os.path.join(base_path, 'logs', 'outputLog.log')
 
 #测试数据保存目录
-test_data_path = os.path.join(base_path, 'test_data', 'test_data.yaml')
+test_data_path = os.path.join(base_path, 'test_underway_data')
 
 # 测试结果保存路径
-test_result_report = os.path.join(base_path, "result_report")
+test_result_report = os.path.join(base_path, "report")
 
 #调用日志
 logger = handle(file=log_path)

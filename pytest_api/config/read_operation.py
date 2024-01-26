@@ -1,11 +1,12 @@
 import yaml
 import os
 import sys
+import json
 
 
 def add_yaml_data(file, key=None, values=None,):
     """
-    追加内容,保存测试中所产生的需要调用的数据
+    追加内容,保存测试中所产生的需要调用的数据到yaml
     :return:
     """
     data = {key: values}
@@ -15,7 +16,7 @@ def add_yaml_data(file, key=None, values=None,):
 
 def rand_yaml_data(file, key=None):
     """
-    读取
+    读取测试中保存的数据
     :return:
     """
     with open(file=file, mode='r', encoding='utf-8') as f:
@@ -27,27 +28,15 @@ def rand_yaml_data(file, key=None):
         return data[key]
 
 
-def rand_yaml_apidata(file):
+def rand_json_apidata(file):
     """
-    读取yaml文件中的测试用例数据
+    读取json文件中的测试api请求数据
     :return:
     """
     with open(file=file, mode='r', encoding='utf-8') as f:
-        data = yaml.load(f,Loader=yaml.FullLoader)
-        # print(type(test_data), test_data)
+        data = json.loads(f.read()) # json转化为字段返回
         f.close()
         return data
-
-def rand_yaml_testdata(file, key=None):
-    """
-    读取yaml文件中的测试用例数据和测试过程中保存的数据
-    :return:
-    """
-    with open(file=file, mode='r', encoding='utf-8') as f:
-        data = yaml.load(f,Loader=yaml.FullLoader)
-        # print(type(test_data), test_data)
-        f.close()
-        return data[key]
 
 def clear_yaml_data(file):
     """
@@ -60,12 +49,14 @@ def clear_yaml_data(file):
         f.close()
 
 if __name__ == "__main__":
-    # add_yaml_data()
-    # print(os.getcwd())
-    print(os.path.dirname(os.path.abspath(__file__)))
-    config_path_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config_data.yaml")
-    # print(path_dir)
-    print(rand_yaml_data(file=config_path_dir, key='db'))
+    path_dir = os.path.join(os.path.join(os.getcwd(), "pytest_api", "test_underway_data", "queryProductDetail.yaml"))
+    # add_yaml_data(file=path_dir, key="age", values=23)
 
-    # print(rand_yaml_data(file="config_data.yaml", key='db'))
-    pass
+    path_dir = os.path.join(os.path.join(os.getcwd(), "pytest_api", "test_underway_data", "queryProductDetail.yaml"))
+    # print(rand_yaml_data(file=path_dir, key='user'))
+
+    # path_dir = os.path.join(os.path.join(os.getcwd(), "pytest_api", "test_data", "queryProductDetail.json"))
+    # val = rand_json_apidata(file=path_dir)
+    # print(val.get("hotelId"))
+    
+    # clear_yaml_data(file=path_dir)

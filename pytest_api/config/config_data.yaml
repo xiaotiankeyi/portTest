@@ -4,3 +4,4 @@ post: 3306
 user: mysql
 passwd: 123456
 db: test
+gender: 男

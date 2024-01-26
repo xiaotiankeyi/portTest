@@ -1,0 +1,12 @@
+{
+	"hotelId": "517675",
+	"supplyRateId": null,
+	"checkInDate": "{{checkIndate}}",
+	"checkOutDate": "{{checkOutdate}}",
+	"supplyType": "1",
+	"supplyCode": null,
+	"roomNum": 1,
+	"roomGuestNumbers": null,
+	"whiteSupplyCodes": null,
+	"blackSupplyCodes": null
+}

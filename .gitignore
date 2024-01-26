@@ -1,0 +1,11 @@
+.env
+reports/*
+*__pycache__
+*__pycache__/*
+*.pyc
+.python-version
+pytest_api/logs/*.log
+.history
+.idea
+.pytest_cache
+pytest_api/report/*
