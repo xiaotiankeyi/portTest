@@ -1,12 +1,20 @@
 {
-	"hotelId": "517675",
-	"supplyRateId": null,
-	"checkInDate": "{{checkIndate}}",
-	"checkOutDate": "{{checkOutdate}}",
-	"supplyType": "1",
-	"supplyCode": null,
-	"roomNum": 1,
-	"roomGuestNumbers": null,
-	"whiteSupplyCodes": null,
-	"blackSupplyCodes": null
+	"businessRequest": {
+		"hotelId": "{{hotelId}}",
+		"checkInDate": "{{checkIndate}}",
+		"checkOutDate": "{{checkOutdate}}",
+		"roomNum": 1,
+		"roomGuestNum": {
+			"numberOfAdults": 1,
+			"numberOfChildren": 2,
+			"childrenAges": "1,2"
+		}
+	},
+	"header": {
+		"partnerCode": "{{partnerCode}}",
+		"requestType": "queryProductDetail",
+		"signature": "{{queryProductDetail_signature}}",
+		"timestamp": "{{timestamp}}",
+		"version": "1.0.0"
+	}
 }

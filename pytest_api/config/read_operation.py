@@ -2,6 +2,7 @@ import yaml
 import os
 import sys
 import json
+sys.path.append(os.path.join(os.getcwd(), "pytest_api", "config"))
 
 
 def add_yaml_data(file, key=None, values=None,):
@@ -34,7 +35,7 @@ def rand_json_apidata(file):
     :return:
     """
     with open(file=file, mode='r', encoding='utf-8') as f:
-        data = json.loads(f.read()) # json转化为字段返回
+        data = json.loads(f.read()) # json转化为字典返回
         f.close()
         return data
 

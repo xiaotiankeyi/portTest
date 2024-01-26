@@ -2,9 +2,10 @@ import os
 import sys
 
 sys.path.append(os.path.join(os.getcwd(), "pytest_api"))
+sys.path.append(os.path.join(os.getcwd(), "pytest_api", "public"))
 
-from public.test_period import startup
-from public.requestway import RunMain
+from test_period import startup
+from requestway import RunMain
 from config.read_operation import rand_json_apidata
 from config.read_operation import add_yaml_data
 from config.read_operation import rand_yaml_data

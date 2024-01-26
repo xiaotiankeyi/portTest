@@ -15,7 +15,7 @@ print(REPORT_DIR)
 
 
 # 配置运行的 URL
-url = "http://shub.redaug.cn/hotel-shub-server"
+url = "http://shub.redaug.cn/api/hotel-shub-server"
 
 # 失败重跑次数
 rerun = "2"
